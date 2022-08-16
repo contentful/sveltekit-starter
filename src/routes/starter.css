@@ -1,0 +1,142 @@
+@import url('https://unpkg.com/modern-css-reset/dist/reset.min.css');
+@import url('https://unpkg.com/@contentful/f36-tokens@4.0.1/dist/css/index.css');
+@import url('https://www.contentful.com/fonts.css');
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 100%;
+}
+
+a {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
+  padding: 0 1rem;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Avenir Next W01';
+  margin: 0;
+  color: var(--text-color);
+  background: var(--bkg);
+  line-height: var(--line-height-default);
+}
+
+/* Buttons in f36 default to Medium size */
+button {
+  border: 1px solid;
+  box-shadow: 0px 1px 0px rgb(25, 37, 50, 0.08);
+  outline: none;
+  border-radius: var(--border-radius-medium);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-condensed);
+  padding: var(--spacing-2xs) var(--spacing-m);
+  min-height: 32px;
+  cursor: pointer;
+  text-decoration: none;
+
+  /* Making a choice here to default to the "Primary" variant */
+  color: var(--color-white);
+  background: var(--blue-500);
+  border-color: var(--blue-500);
+}
+
+button:hover {
+  background: var(--blue-600);
+  border-color: var(--blue-600);
+}
+button:focus {
+  border-color: var(--blue-600);
+  box-shadow: var(--glow-primary);
+}
+
+button:focus:not(:focus-visible) {
+  border-color: var(--color-blue500);
+  box-shadow: unset;
+}
+
+button:focus-visible {
+  border-color: var(--color-blue-600);
+  box-shadow: var(--glow-primary);
+}
+
+button > a {
+  text-decoration: none;
+  font-weight: normal;
+}
+
+button.button-secondary {
+  background: var(--gray-200);
+  color: var(--gray-900);
+  background: var(--color-white);
+  border-color: var(--gray-300);
+}
+
+button.button-large {
+  font-weight: var(--font-size-xl);
+  line-height: var(--line-height-xl);
+  min-height: 48px;
+  padding: var(--spacing-xs) var(--spacing-m);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-bottom: var(--spacing-l);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 800;
+  letter-spacing: -0.02rem;
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+}
+
+h2 {
+  font-size: var(--font-size-3xl);
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+}
+
+h4 {
+  font-size: var(--font-size-xl);
+}
+
+h5 {
+  font-size: var(--font-size-l);
+}
+
+p {
+  font-size: var(--font-size-l);
+  line-height: var(--line-height-m);
+  margin: var(--spacing-m) 0;
+}
+
+small {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1.1;
+  display: block;
+}
