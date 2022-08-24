@@ -35,7 +35,7 @@ const query = `
 //   }
 // }
 
-export async function GET() {
+export async function load() {
 	const url = 'https://graphql.contentful.com/content/v1/spaces/' + CONTENTFUL_SPACE_ID;
 
 	const response = await fetch(url, {
@@ -54,13 +54,14 @@ export async function GET() {
 		console.log(items);
 
 		return {
-			body: {
-				offices: items
-			}
+			offices: items
 		};
 	}
 
 	return {
-		status: 404
+		status: 404,
+		errors: {
+			password: 'Cannot Connect to the API'
+		}
 	};
 }

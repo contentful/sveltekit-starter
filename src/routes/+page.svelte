@@ -1,7 +1,7 @@
 <script>
 	import Footer from '../lib/Footer.svelte';
 
-	export let offices;
+	export let data;
 </script>
 
 <main>
