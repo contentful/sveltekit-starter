@@ -12,6 +12,7 @@ const query = `
       }
       photo {
         url
+        description
       }
     }
   }

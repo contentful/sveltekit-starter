@@ -4,6 +4,8 @@
 
 <h1>Hello</h1>
 
+<a href="/offices">Our offices</a>
+
 <section>
 	{#each data.employees as employee}
 		<figure>
