@@ -1,29 +1,21 @@
-# create-svelte
+# Contentful and Sveltekit starter
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Everything you need to build a [SvelteKit](https://kit.svelte.dev/) project with Contentful. This starter shows you how to:
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+- Fetch data from the Contentful GraphQL API
+- Create dynamic routes
+- Use the Svelte component Lifecycle
+- Display a map using [Maplibre](https://maplibre.org/)
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Once you've installed the dependencies with `npm install`, run the project:
 
 ```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
+
+This will start the server and open the app in a new browser tab.
 
 ## Building
 
