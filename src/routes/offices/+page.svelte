@@ -6,12 +6,14 @@
 
 <section>
 	{#each data.offices as office}
-		<figure>
-			<img src={office.photo.url} alt={office.photo.description} />
-			<figcaption>
-				<p>{office.name}</p>
-			</figcaption>
-		</figure>
+		<a href={`/offices/${office.slug}`}>
+			<figure>
+				<img src={office.photo.url} alt={office.photo.description} />
+				<figcaption>
+					<p>{office.name}</p>
+				</figcaption>
+			</figure>
+		</a>
 	{/each}
 </section>
 

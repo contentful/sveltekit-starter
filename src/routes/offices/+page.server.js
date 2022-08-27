@@ -6,6 +6,7 @@ const query = `
   officeCollection{
     items{
       name
+      slug
       location {
         lat
         lon
