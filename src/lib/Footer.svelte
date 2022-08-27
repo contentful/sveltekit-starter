@@ -1,4 +1,4 @@
-<footer>Thank you!</footer>
+<footer>See our other starter kits</footer>
 
 <style>
 	footer {

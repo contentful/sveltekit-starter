@@ -1,4 +1,5 @@
 import { env } from '$env/dynamic/private';
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 const { CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN } = env;
 
 export async function load({ params }) {
@@ -9,6 +10,17 @@ export async function load({ params }) {
     officeCollection(where: {slug:"${params.slug}"}) {
       items{
         name
+        location {
+          lat
+          lon
+        }
+        photo {
+          url
+          description
+        }
+        description{
+          json
+        }
       }
     }
   }
@@ -27,8 +39,12 @@ export async function load({ params }) {
 		const { data } = await response.json();
 		const { items } = data.officeCollection;
 
+		const officeData = items[0];
+		// convert description to HTML
+		officeData.description = documentToHtmlString(officeData.description.json);
+
 		return {
-			office: items[0]
+			office: officeData
 		};
 	}
 
