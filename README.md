@@ -6,6 +6,7 @@ Everything you need to build a [SvelteKit](https://kit.svelte.dev/) project with
 - Create dynamic routes
 - Use the Svelte component Lifecycle
 - Display a map using [Maplibre](https://maplibre.org/)
+- Use [private Environment Variables](https://kit.svelte.dev/docs/modules#$env-static-private) server-side.
 
 ## Developing
 

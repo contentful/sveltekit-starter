@@ -1,10 +1,7 @@
-import { env } from '$env/dynamic/private';
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
-const { CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN } = env;
+import contentfulFetch from '$lib/contentful-fetch';
 
 export async function load({ params }) {
-	const url = 'https://graphql.contentful.com/content/v1/spaces/' + CONTENTFUL_SPACE_ID;
-
 	const query = `
   {
     officeCollection(where: {slug:"${params.slug}"}) {
@@ -15,7 +12,9 @@ export async function load({ params }) {
           lon
         }
         photo {
-          url
+          url(transform: {
+            format: AVIF
+          })
           description
         }
         description{
@@ -26,14 +25,7 @@ export async function load({ params }) {
   }
   `;
 
-	const response = await fetch(url, {
-		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json',
-			Authorization: 'Bearer ' + CONTENTFUL_ACCESS_TOKEN
-		},
-		body: JSON.stringify({ query })
-	});
+	const response = await contentfulFetch(query);
 
 	if (response.ok) {
 		const { data } = await response.json();
