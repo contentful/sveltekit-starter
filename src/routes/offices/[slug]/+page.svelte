@@ -31,19 +31,17 @@
 	export let data;
 </script>
 
-<a href="/offices">← Back to all offices</a>
-
-<h1>Hello {data.office.name}</h1>
+<h1>{data.office.name}</h1>
 
 <img src={data.office.photo.url} alt={data.office.photo.description} />
+
+<p>{@html data.office.description}</p>
 
 <div class="map-container" bind:this={mapContainer}>
 	{#if map}
 		<slot />
 	{/if}
 </div>
-
-<p>{@html data.office.description}</p>
 
 <style>
 	.map-container {
