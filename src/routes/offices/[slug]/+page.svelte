@@ -1,33 +1,4 @@
 <script>
-	import { onMount, onDestroy } from 'svelte';
-	import maplibregl from 'maplibre-gl';
-
-	let mapContainer;
-	let map;
-	let marker;
-
-	onMount(() => {
-		const { location } = data.office;
-
-		const center = [location.lon, location.lat];
-		map = new maplibregl.Map({
-			container: mapContainer,
-			style: 'https://demotiles.maplibre.org/style.json', // style URL
-			center,
-			zoom: 3
-		});
-
-		map.on('load', function () {
-			marker = new maplibregl.Marker().setLngLat(center).addTo(map);
-		});
-	});
-
-	onDestroy(() => {
-		if (map) {
-			map.remove();
-		}
-	});
-
 	export let data;
 </script>
 
@@ -37,10 +8,18 @@
 
 <p>{@html data.office.description}</p>
 
-<div class="map-container" bind:this={mapContainer}>
-	{#if map}
-		<slot />
-	{/if}
+<div class="map-container">
+	<iframe
+		width="300"
+		height="170"
+		title="Map"
+		frameborder="0"
+		scrolling="no"
+		marginheight="0"
+		marginwidth="0"
+		src="https://maps.google.com/maps?q={data.office.location.lat},{data.office.location
+			.lon}&z=12&amp;output=embed"
+	/>
 </div>
 
 <style>

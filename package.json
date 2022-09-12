@@ -11,7 +11,7 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
-		"@sveltejs/kit": "^1.0.0-next.431",
+		"@sveltejs/kit": "next",
 		"prettier": "^2.6.2",
 		"prettier-plugin-svelte": "^2.7.0",
 		"svelte": "^3.44.0",
@@ -19,7 +19,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@contentful/rich-text-html-renderer": "^15.13.1",
-		"maplibre-gl": "^2.4.0"
+		"@contentful/rich-text-html-renderer": "^15.13.1"
 	}
 }
