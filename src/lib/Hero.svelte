@@ -1,6 +1,6 @@
 <header>
 	<h1>Contentful + Sveltekit</h1>
-	<p>See a careers page powered by Contentful</p>
+	<p>Build a team page powered by Contentful</p>
 </header>
 
 <style>

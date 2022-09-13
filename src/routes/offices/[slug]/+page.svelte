@@ -10,8 +10,8 @@
 
 <div class="map-container">
 	<iframe
-		width="300"
-		height="170"
+		width="400"
+		height="400"
 		title="Map"
 		frameborder="0"
 		scrolling="no"

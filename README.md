@@ -5,8 +5,8 @@ Everything you need to build a [SvelteKit](https://kit.svelte.dev/) project with
 - Fetch data from the Contentful GraphQL API
 - Create dynamic routes
 - Use the Svelte component Lifecycle
-- Display a map using [Maplibre](https://maplibre.org/)
-- Use [private Environment Variables](https://kit.svelte.dev/docs/modules#$env-static-private) server-side.
+- Display a map using Google Maps
+- Use [private Environment Variables](https://kit.svelte.dev/docs/modules#$env-static-private) server-side
 
 ## Developing
 
