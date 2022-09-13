@@ -4,11 +4,15 @@
 
 <h1>{data.office.name}</h1>
 
-<img src={data.office.photo.url} alt={data.office.photo.description} />
+<section class="flex">
+	<p>{@html data.office.description}</p>
+	<img src={data.office.photo.url} alt={data.office.photo.description} />
+</section>
 
-<p>{@html data.office.description}</p>
+<hr />
 
-<div class="map-container">
+<section class="center">
+	<h2>Come visit us!</h2>
 	<iframe
 		width="400"
 		height="400"
@@ -20,11 +24,22 @@
 		src="https://maps.google.com/maps?q={data.office.location.lat},{data.office.location
 			.lon}&z=12&amp;output=embed"
 	/>
-</div>
+</section>
 
 <style>
-	.map-container {
-		width: 400px;
-		height: 400px;
+	.flex {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		width: 100%;
+	}
+
+	.center {
+		text-align: center;
+	}
+
+	img {
+		max-width: 400px;
+		height: auto;
 	}
 </style>
