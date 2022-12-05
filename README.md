@@ -1,5 +1,7 @@
 # Contentful and Sveltekit starter
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcontentful%2Fsveltekit-starter)
+
 Everything you need to build a [SvelteKit](https://kit.svelte.dev/) project with Contentful. This starter shows you how to:
 
 - Fetch data from the Contentful GraphQL API
@@ -8,15 +10,47 @@ Everything you need to build a [SvelteKit](https://kit.svelte.dev/) project with
 - Display a map using Google Maps
 - Use [private Environment Variables](https://kit.svelte.dev/docs/modules#$env-static-private) server-side
 
-## Developing
+## Quick Start
 
-Once you've installed the dependencies with `npm install`, run the project:
+### Step 1. Get the source code and install dependencies
+
+Clone this repository
+
+```bash
+git clone https://github.com/contentful/sveltekit-starter.git
+```
+
+Install dependencies.
+
+```bash
+npm install
+```
+
+### Step 2. Create an environment file
+
+1. Rename the `.env.example` at the root of your project to `.env` (so it is ignored by Git).
+2. Find your Contentful [Space ID](https://www.contentful.com/help/find-space-id/), your [Content Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/) access token, and [Content Management API](https://www.contentful.com/developers/docs/references/content-management-api/) access token.
+3. In the new `.env` file, replace `YOUR_SPACE_ID`, `YOUR_DELIVERY_TOKEN` and `YOUR_MANAGEMENT_ACCESS_TOKEN` with the correct values.
+
+### Step 3. Import our content model
+
+The project comes with a Contentful set up command that imports the required content model and adds sample content to your space.
+
+Run the following command to import the content model.
+
+```bash
+npm run setup
+```
+
+### Step 4. Run the project locally
 
 ```bash
 npm run dev
 ```
 
-This will start the server and open the app in a new browser tab.
+This will start the development server and open the app in a new browser tab.
+
+The page will reload when you make changes.
 
 ## Building
 
