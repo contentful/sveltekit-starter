@@ -1,3 +1,4 @@
+import { error } from '@sveltejs/kit';
 import contentfulFetch from '$lib/contentful-fetch';
 
 const query = `
@@ -20,19 +21,15 @@ const query = `
 export async function load() {
 	const response = await contentfulFetch(query);
 
-	if (response.ok) {
-		const { data } = await response.json();
-		const { items } = data.officeCollection;
-
-		return {
-			offices: items
-		};
+	if (!response.ok) {
+		throw error(404, {
+			message: response.statusText
+		});
 	}
+	const { data } = await response.json();
+	const { items } = data.officeCollection;
 
 	return {
-		status: 404,
-		errors: {
-			message: 'Cannot Connect to the API'
-		}
+		offices: items
 	};
 }

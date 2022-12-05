@@ -1,5 +1,4 @@
-import { env } from '$env/dynamic/private';
-const { CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN } = env;
+import { CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN } from '$env/static/private';
 
 console.log(
 	`https://graphql.contentful.com/content/v1/spaces/${CONTENTFUL_SPACE_ID}/explore?access_token=${CONTENTFUL_ACCESS_TOKEN}`
