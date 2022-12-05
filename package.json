@@ -19,6 +19,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@contentful/rich-text-html-renderer": "^16.0.2"
+		"@contentful/rich-text-html-renderer": "^16.0.2",
+		"contentful-import": "^8.5.13",
+		"dotenv": "^16.0.3"
 	}
 }
