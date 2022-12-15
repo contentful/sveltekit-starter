@@ -35,10 +35,7 @@ export async function load() {
     employees: items.map((e) => {
       const options = { month: 'long', year: 'numeric' }
       const date = new Date(e.startDate)
-      const formattedStartDate = new Intl.DateTimeFormat(
-        'en-US',
-        options
-      ).format(date)
+      const formattedStartDate = new Intl.DateTimeFormat('en-US', options).format(date)
 
       return {
         ...e,
