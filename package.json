@@ -13,7 +13,7 @@
   "devDependencies": {
     "prettier": "^2.8.7",
     "prettier-plugin-svelte": "^2.10.0",
-    "vite": "^4.2.1",
+    "vite": "^4.2.3",
     "contentful-import": "^8.5.43",
     "dotenv": "^16.0.3"
   },
