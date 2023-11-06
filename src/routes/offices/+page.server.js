@@ -22,7 +22,7 @@ export async function load() {
   const response = await contentfulFetch(query)
 
   if (!response.ok) {
-    throw error(404, {
+    throw error(response.status, {
       message: response.statusText,
     })
   }
