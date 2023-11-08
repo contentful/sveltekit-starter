@@ -11,7 +11,7 @@
     "setup": "node ./contentful/setup.js"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=18"
   },
   "devDependencies": {
     "prettier": "^3.0.3",
